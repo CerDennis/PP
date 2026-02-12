@@ -19,6 +19,6 @@
 		"allowSyntheticDefaultImports": true,
 		"types": ["@vitest/browser/matchers"]
 	},
-	"include": ["src/**/*.ts", "src/**/*.tsx"],
+	"include": ["*.ts", "*.tsx"],
 	"exclude": ["node_modules", "dist"]
 }

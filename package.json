@@ -1,61 +1,61 @@
 {
-	"name": "recipefinder",
-	"version": "1.0.0",
-	"description": "Simple recipe finder",
-	"main": "index.js",
-	"scripts": {
-		"build": "vite build",
-		"dev": "vite",
-		"lint": "eslint --ext .ts,.tsx --resolve-plugins-relative-to src",
-		"preview": "vite preview",
-		"prettify": "prettier --check --write .",
-		"prettify:check": "prettier --check .",
-		"test": "vitest run",
-		"testWithCoverage": "vitest run --coverage",
-		"type-check": "tsc --noEmit",
-		"prepare": "husky"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/CerDennis/recipeFinder.git"
-	},
-	"author": "CerDennis",
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/CerDennis/recipeFinder/issues"
-	},
-	"homepage": "https://github.com/CerDennis/recipeFinder#readme",
-	"dependencies": {
-		"@fontsource/roboto": "^5.2.6",
-		"@mui/icons-material": "^7.1.1",
-		"@mui/material": "^7.1.1",
-		"@mui/styled-engine-sc": "^7.1.1",
-		"eslint": "^8.46.0",
-		"eslint-config-airbnb-base": "^15.0.0",
-		"eslint-import-resolver-typescript": "^3.6.1",
-		"eslint-plugin-import": "^2.28.0",
-		"eslint-plugin-jsx-a11y": "^6.10.2",
-		"eslint-plugin-react": "^7.37.5",
-		"eslint-plugin-react-hooks": "^4.6.0",
-		"eslint-plugin-unused-imports": "^3.0.0",
-		"react": "18.3.1",
-		"react-dom": "18.3.1",
-		"react-error-boundary": "^6.0.0",
-		"react-router": "^7.6.2",
-		"styled-components": "^6.1.18"
-	},
-	"devDependencies": {
-		"@testing-library/dom": "^10.4.0",
-		"@testing-library/react": "^16.3.0",
-		"@types/react-dom": "^19.1.6",
-		"@vitejs/plugin-react": "^4.5.2",
-		"@vitest/browser": "^3.2.3",
-		"@vitest/coverage-v8": "^3.2.3",
-		"husky": "^9.1.7",
-		"jsdom": "^26.1.0",
-		"prettier": "3.5.3",
-		"typescript": "^5.8.3",
-		"vite": "^6.3.5",
-		"vitest": "^3.2.3"
-	}
+  "name": "pairProgramming",
+  "version": "1.0.0",
+  "description": "A React application for pair programming.",
+  "main": "index.js",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite",
+    "lint": "eslint --ext .ts,.tsx --resolve-plugins-relative-to src",
+    "preview": "vite preview",
+    "prettify": "prettier --check --write .",
+    "prettify:check": "prettier --check .",
+    "test": "vitest run",
+    "testWithCoverage": "vitest run --coverage",
+    "type-check": "tsc --noEmit",
+    "prepare": "husky"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CerDennis/PP.git"
+  },
+  "author": "CerDennis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CerDennis/PP/issues"
+  },
+  "homepage": "https://github.com/CerDennis/PP#readme",
+  "dependencies": {
+    "@fontsource/roboto": "^5.2.6",
+    "@mui/icons-material": "^7.1.1",
+    "@mui/material": "^7.1.1",
+    "@mui/styled-engine-sc": "^7.1.1",
+    "eslint": "^8.46.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.28.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-unused-imports": "^3.0.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-error-boundary": "^6.0.0",
+    "react-router": "^7.6.2",
+    "styled-components": "^6.1.18"
+  },
+  "devDependencies": {
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/react": "^16.3.0",
+    "@types/react-dom": "^19.1.6",
+    "@vitejs/plugin-react": "^4.5.2",
+    "@vitest/browser": "^3.2.3",
+    "@vitest/coverage-v8": "^3.2.3",
+    "husky": "^9.1.7",
+    "jsdom": "^26.1.0",
+    "prettier": "3.5.3",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5",
+    "vitest": "^3.2.3"
+  }
 }
