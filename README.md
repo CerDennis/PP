@@ -49,9 +49,3 @@ npm run test
 | [![react-error-boundary](https://img.shields.io/badge/-react--error--boundary-61DAFB?logo=react&logoColor=white&style=flat)](https://github.com/bvaughn/react-error-boundary) | Error boundaries for React components |
 
 ---
-
-## 💡 Project Decisions
-
-I chose to keep things simple and build the project step by step. I started by implementing the search page, followed by the preferred page, and then the home page to display some default recipes. Once the main pages were ready, I added a top navigation bar to make it easy to switch between sections.
-
-For this first version, I decided to store user data in localStorage for simplicity. In the future, as the app grows, it will be straightforward to migrate to a state manager like Zustand or Redux to better support scalability and more advanced features.
