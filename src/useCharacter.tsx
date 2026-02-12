@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 type CharacterBio = {
   health: number;
@@ -7,9 +7,10 @@ type CharacterBio = {
 };
 
 type UseCharacter = {
-    character: CharacterBio;
-    attackThisCharacter: (damage?: number) => void;
-}
+  character: CharacterBio;
+  attackThisCharacter: (damage?: number) => void;
+  healThisCharacter: (healPoints?: number) => void;
+};
 
 export const useCharacter = (): UseCharacter => {
   const [health, setHealth] = useState(1000);
@@ -20,13 +21,25 @@ export const useCharacter = (): UseCharacter => {
     setHealth((prevHealth) => prevHealth - damage);
   };
 
+  const healThisCharacter = (healPoints: number = 50) => {
+    if (health + healPoints <= 1000) {
+      setHealth((prevHealth) => prevHealth + healPoints);
+    }
+  };
+
+  useEffect(() => {
+    if (health <= 0 && isAlive) {
+      setIsAlive(false);
+    }
+  }, [health, isAlive]);
+
   return {
     character: {
       health,
       level,
       isAlive,
     },
-    attackThisCharacter
+    attackThisCharacter,
+    healThisCharacter,
   };
 };
-

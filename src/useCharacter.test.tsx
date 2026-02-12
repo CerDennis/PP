@@ -12,20 +12,66 @@ describe("Character Component", () => {
 
   it("should subtract the health when the character is attacked", () => {
     const { result } = renderHook(() => useCharacter());
-    act(() => {result.current.attackThisCharacter();});
+    act(() => {
+      result.current.attackThisCharacter();
+    });
 
     expect(result.current.character.health).toBe(950);
   });
 
   it("should subtract the correct amount of health when the character is attacked", () => {
     const { result } = renderHook(() => useCharacter());
-    act(() => {result.current.attackThisCharacter(300);});
+    act(() => {
+      result.current.attackThisCharacter(300);
+    });
 
     expect(result.current.character.health).toBe(700);
   });
 
-  it.todo("should die when the health is 0");
-  it.todo("should add health when the character is healed");
-  it.todo("should not be able to heal above 1000");
-  it.todo("should not be able to heal below 0");
+  it("should die when the health is 0", () => {
+    const { result } = renderHook(() => useCharacter());
+    act(() => {
+      result.current.attackThisCharacter(1000);
+    });
+
+    expect(result.current.character.isAlive).toBe(false);
+  });
+
+  it("should add health when the character is healed", () => {
+    const { result } = renderHook(() => useCharacter());
+
+    act(() => {
+      result.current.attackThisCharacter(200);
+    });
+
+    act(() => {
+      result.current.healThisCharacter(200);
+    });
+
+    expect(result.current.character.health).toBe(1000);
+  });
+
+  it("should not be able to heal above 1000", () => {
+    const { result } = renderHook(() => useCharacter());
+
+    act(() => {
+      result.current.healThisCharacter(200);
+    });
+
+    expect(result.current.character.health).toBe(1000);
+  });
+
+  it("should not be able to heal below 0", () => {
+    const { result } = renderHook(() => useCharacter());
+
+    act(() => {
+      result.current.attackThisCharacter(1400);
+    });
+
+    act(() => {
+      result.current.healThisCharacter(200);
+    });
+
+    expect(result.current.character.health).toBe(0);
+  });
 });
